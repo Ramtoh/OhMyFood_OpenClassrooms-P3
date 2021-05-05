@@ -1,0 +1,42 @@
+footer{
+    bottom: 0;
+    background-color: $background-grey;
+    padding-left: 25px;
+
+    .footerLogo{
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .footerLogo img{
+        width: 100px;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        padding-bottom: 40px;
+    }
+
+    li{
+        list-style: none;
+    }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .fa-utensils{
+            width: 13px;
+            height: 13px;
+            margin-right: 10px;
+        }
+
+        .fa-hands-helping{
+            width: 13px;
+            height: 13px;
+            margin-right: 10px;
+        }
+        
+}  

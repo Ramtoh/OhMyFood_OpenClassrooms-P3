@@ -1,0 +1,151 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Roboto : font-family: 'Roboto', sans-serif; /// Shrikhand : font-family: 'Shrikhand', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import './_variables';
+@import './_footer';
+@import './_mixins';
+
+body{
+    width: 100%;
+}
+
+header{
+    @include centerFlex;
+    width: 100%;
+
+    .container{
+        width: 100%;
+    }
+
+        .logo{
+            @include centerFlex;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+            .logo img{
+                width: 165px;
+                height: 25px;
+            }
+    
+                .position{
+                @include centerFlex;
+                background-color: $light-bground-grey;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                }
+
+                    i{
+                        margin-right: 13px;
+                    }
+}
+
+section{
+    @include centerFlex;
+    flex-direction: column;
+    background-color: $white-grey;
+
+    h1{
+       font-size: 15px;
+       margin-top: 50px; 
+    }
+
+        h2{
+            font-size: 12px;
+            margin-top: 25px;
+            margin-bottom: 35px;
+        }
+
+            .btnExplore{
+                @include centerFlex;
+                background-color: $color-secondary;
+                border: none;
+                border-radius: 25px;
+                height: 50px;
+                width: 220px;
+                margin-bottom: 50px;
+                box-shadow: 0 0 2px grey;
+            }
+
+                span{
+                    color: white;
+                }
+}
+
+aside{
+    h2{
+        padding-left: 25px;
+        margin-top: 55px;
+        margin-bottom: 35px;
+    }
+
+        button{
+            height: 75px;
+            width: 325px;
+            border-radius: 25px; 
+            border: none;
+            background-color: white;
+            box-shadow: 0 0 1px gray;
+        }
+
+        button:hover{
+            background: $color-secondary;
+            transition: 3s;
+        }
+
+            .buttonsOperation{
+                @include centerFlex;
+                flex-direction: column;
+                row-gap: 25px;
+                margin-bottom: 65px;
+            }
+
+}
+
+article{
+    background-color: $white-grey;
+    h2{
+        padding-left: 25px;
+        padding-top: 60px;
+        margin-bottom: 30px;
+    }
+        .Restaurants{
+            flex-direction: column;
+            @include centerFlex;
+            row-gap: 15px;
+            padding-bottom: 65px;
+        }
+
+            figure{
+                width: 85%;
+                height: 250px;
+                border-radius: 25px;
+                box-shadow: 0 0 2px gray;
+            }
+
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                    height: 65%;
+                }
+                    figcaption{
+                        padding-left: 15px;
+                        padding-top: 20px;
+                        h3{
+                            
+                        }
+
+                        h4{
+
+                        }
+                    }
+}
+
