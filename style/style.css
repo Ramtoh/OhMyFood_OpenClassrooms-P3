@@ -154,14 +154,15 @@ section .btnExplore {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #FF79DA;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
   border: none;
+  -webkit-box-shadow: 5px 10px 18px #eaeaea;
+          box-shadow: 5px 10px 18px #eaeaea;
   border-radius: 25px;
   height: 50px;
   width: 220px;
   margin-bottom: 50px;
-  -webkit-box-shadow: 0 0 2px grey;
-          box-shadow: 0 0 2px grey;
 }
 
 section span {
@@ -177,17 +178,21 @@ aside h2 {
 aside button {
   height: 75px;
   width: 325px;
-  border-radius: 25px;
   border: none;
+  -webkit-box-shadow: 5px 10px 18px #eaeaea;
+          box-shadow: 5px 10px 18px #eaeaea;
+  border-radius: 25px;
   background-color: white;
-  -webkit-box-shadow: 0 0 1px gray;
-          box-shadow: 0 0 1px gray;
 }
 
 aside button:hover {
-  background: #FF79DA;
-  -webkit-transition: 3s;
-  transition: 3s;
+  background: #f5edff;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+aside button:hover i {
+  color: #9356DC;
 }
 
 aside .buttonsOperation {
@@ -206,6 +211,13 @@ aside .buttonsOperation {
           flex-direction: column;
   row-gap: 25px;
   margin-bottom: 65px;
+}
+
+aside .numbers {
+  background: #9356DC;
+  color: white;
+  padding: 0.5em 0.6em;
+  border-radius: 50%;
 }
 
 article {
@@ -254,7 +266,32 @@ article img {
 }
 
 article figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-left: 15px;
   padding-top: 20px;
+}
+
+article figcaption h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article figcaption h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article figcaption .fa-heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

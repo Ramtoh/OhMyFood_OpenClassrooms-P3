@@ -3,3 +3,16 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin shadowButtons{
+    border: none;
+    box-shadow: 5px 10px 18px $light-bground-grey;
+}
+
+@mixin fadeButtons{
+    background-image: linear-gradient($color-primary, $color-secondary);
+}
+
+@mixin InvertedfadeButtons{
+    background-image:linear-gradient($color-secondary, $color-primary);
+}

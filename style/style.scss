@@ -64,13 +64,12 @@ section{
 
             .btnExplore{
                 @include centerFlex;
-                background-color: $color-secondary;
-                border: none;
+                @include InvertedfadeButtons;
+                @include shadowButtons;
                 border-radius: 25px;
                 height: 50px;
                 width: 220px;
                 margin-bottom: 50px;
-                box-shadow: 0 0 2px grey;
             }
 
                 span{
@@ -88,15 +87,19 @@ aside{
         button{
             height: 75px;
             width: 325px;
+            @include shadowButtons;
             border-radius: 25px; 
-            border: none;
             background-color: white;
-            box-shadow: 0 0 1px gray;
         }
 
+
         button:hover{
-            background: $color-secondary;
-            transition: 3s;
+            background: $color-secondary-lighter;
+            transition: 1s;
+        }
+
+        button:hover i{
+            color: $color-primary;
         }
 
             .buttonsOperation{
@@ -105,7 +108,14 @@ aside{
                 row-gap: 25px;
                 margin-bottom: 65px;
             }
-
+        
+        .numbers{
+            background: $color-primary;
+            color: white;
+            padding: 0.5em 0.6em;
+            border-radius: 50%;
+        }
+    
 }
 
 article{
@@ -137,15 +147,23 @@ article{
                     height: 65%;
                 }
                     figcaption{
+                        display: flex;
+                        flex-direction: column;
                         padding-left: 15px;
                         padding-top: 20px;
+
                         h3{
-                            
+                            display: flex;
                         }
 
                         h4{
+                            display: flex;
+                        }
 
+                        .fa-heart{
+                            display: flex;
                         }
                     }
+
 }
 
