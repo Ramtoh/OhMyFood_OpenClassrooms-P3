@@ -16,3 +16,19 @@
 @mixin InvertedfadeButtons{
     background-image:linear-gradient($color-secondary, $color-primary);
 }
+
+@mixin menuList{
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    background-color: white;
+    width: 350px;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-top: 15px;
+    h4{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 25px;
+    }
+}
