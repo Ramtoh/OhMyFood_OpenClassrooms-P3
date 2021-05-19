@@ -1,13 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-* {
-  font-family: 'Roboto', sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /* Roboto : font-family: 'Roboto', sans-serif; /// Shrikhand : font-family: 'Shrikhand', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 footer {
   bottom: 0;
   background-color: #353535;
@@ -57,6 +49,14 @@ footer .fa-hands-helping {
 }
 
 /* --------------- Colors --------------- */
+* {
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 header {
   width: 100%;
   display: -webkit-box;
@@ -170,7 +170,7 @@ section .container {
           flex-direction: column;
 }
 
-section .FrenchTitle {
+section .Title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,12 +180,12 @@ section .FrenchTitle {
   margin-top: 35px;
 }
 
-section .FrenchTitle span {
+section .Title span {
   font-family: 'Shrikhand', cursive;
   font-size: 1.6em;
 }
 
-section .FrenchTitle i {
+section .Title i {
   padding: 9px;
 }
 
@@ -352,4 +352,6 @@ aside form span {
           flex-direction: column;
   row-gap: 15px;
 }
+
+/* ---------------------------------------------------------------------------------------------- */
 /*# sourceMappingURL=menufr.css.map */
