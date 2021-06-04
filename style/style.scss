@@ -91,7 +91,6 @@ aside{
     }
 
         button{
-            font-weight: 580;
             letter-spacing: 1px;
             column-gap: 20px;
             display: flex;
@@ -206,7 +205,7 @@ article{
 
                         .fa-heart:hover{
                             background: linear-gradient($color-primary, $color-secondary);
-                            background-clip: text;
+                            background-clip: border-box;
                             color: transparent;
                             -webkit-background-clip: text;
                             transition: all 0.8s linear;

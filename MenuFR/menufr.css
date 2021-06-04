@@ -145,7 +145,7 @@ main h2:before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5;
+  bottom: -5px;
   height: 1px;
   width: 40px;
   border-bottom: 3px solid #99E2D0;
@@ -155,17 +155,17 @@ main h3 {
   padding-top: 15px;
   padding-bottom: 5px;
   font-size: 1em;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 main h4 {
   font-size: 0.9em;
   font-weight: lighter;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 main .fa-check-circle {
@@ -214,6 +214,9 @@ main .listMenu:hover .animCircle {
 
 main .widthAnim {
   width: 95%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 section .container {
@@ -256,7 +259,7 @@ section .Title .fa-heart:before {
 section .Title .fa-heart:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
+  background-clip: border-box;
   color: transparent;
   -webkit-background-clip: text;
   -webkit-transition: all 0.8s linear;

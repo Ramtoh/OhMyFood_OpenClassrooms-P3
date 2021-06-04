@@ -61,7 +61,7 @@ main{
         content : "";
         position: absolute;
         left: 0;
-        bottom  : -5;
+        bottom  : -5px;
         height  : 1px;
         width   : 40px;
         border-bottom:3px solid $color-third;
@@ -71,17 +71,17 @@ main{
         padding-top: 15px;
         padding-bottom: 5px;
         font-size: 1em;
-        text-overflow: ellipsis;
-        white-space: nowrap;
         overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     h4{
         font-size: 0.9em;
         font-weight: lighter;
-        text-overflow: ellipsis;
-        white-space: nowrap;
         overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     .fa-check-circle{
@@ -123,6 +123,9 @@ main{
 
     .widthAnim{
         width: 95%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 }
 
@@ -156,7 +159,7 @@ section{
 
         .fa-heart:hover{
             background: linear-gradient($color-primary, $color-secondary);
-            background-clip: text;
+            background-clip: border-box;
             color: transparent;
             -webkit-background-clip: text;
             transition: all 0.8s linear;
