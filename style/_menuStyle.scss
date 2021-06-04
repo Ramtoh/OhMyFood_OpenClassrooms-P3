@@ -68,12 +68,61 @@ main{
     }
 
     h3{
+        padding-top: 15px;
+        padding-bottom: 5px;
         font-size: 1em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     h4{
-        font-size: 1em;
+        font-size: 0.9em;
         font-weight: lighter;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .fa-check-circle{
+        color: white;
+        font-weight: 900;
+    }
+
+    .fa-check-circle:before{
+        content:'\f058';
+    }
+
+    .circle{
+        @include centerFlex;
+        background: $color-third;
+        overflow: hidden;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 0%;
+    }
+
+    .listMenu{
+        span{
+            padding-top: 38px;
+            padding-right: 25px;
+        }
+    }
+
+    .listMenu:hover{
+        .circle{
+        width: 80px;
+        transition: 0.3s;
+        transition-timing-function: ease-in;
+        }
+
+        .animCircle{
+            animation: rotateCheck 0.3s linear;
+        }
+    }
+
+    .widthAnim{
+        width: 95%;
     }
 }
 
@@ -96,10 +145,24 @@ section{
         i{
             padding: 9px;
         }
+
+        .fa-heart{
+            font-size: 22px;
+        }
+
+        .fa-heart:before {
+            content: "\f004";
+        }
+
+        .fa-heart:hover{
+            background: linear-gradient($color-primary, $color-secondary);
+            background-clip: text;
+            color: transparent;
+            -webkit-background-clip: text;
+            transition: all 0.8s linear;
+            font-weight: 900;
+        }
     }
-
-
-
 
     .containerEntree{
         padding-top: 45px;
@@ -112,7 +175,6 @@ section{
 .entree{
     @include menuList;
     @include shadowButtons;
-    row-gap: 7px;
 }
 
 aside{
@@ -125,6 +187,11 @@ aside{
         width: 220px;
     }
 
+    button:hover{
+        background: linear-gradient($color-secondary 40%, $color-primary 100%);
+        box-shadow: 5px 5px 5px 1px #a1a1a1;
+    }
+
     form{
         @include centerFlex;
         margin-bottom: 80px;
@@ -133,7 +200,6 @@ aside{
             color: white;
         }
     }
-
 }
 
 .containerDish{
@@ -160,4 +226,71 @@ aside{
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+}
+
+.entree, .dishes, .dessert{
+    animation: fadein 2s linear forwards; 
+}
+
+.entree1{
+    animation-delay: 0.1s;
+}
+
+.entree2{
+    animation-delay: 0.2s;
+}
+
+.entree3{
+    animation-delay: 0.3s;
+}
+
+.dishes1{
+    animation-delay: 0.4s;
+}
+
+.dishes2{
+    animation-delay: 0.5s;
+}
+
+.dishes3{
+    animation-delay: 0.6s;
+}
+
+.dessert1{
+    animation-delay: 0.7s;
+}
+
+.dessert2{
+    animation-delay: 0.8s;
+}
+
+.dessert3{
+    animation-delay: 0.9s;
+}
+
+@keyframes fadein{
+    0%{
+    transform: translateY(15px);
+    opacity: 0;
+    }
+
+    50%{
+        transform: translateY(7px);
+        opacity: 0.5;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateCheck{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
 }

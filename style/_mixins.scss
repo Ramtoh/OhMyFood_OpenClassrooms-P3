@@ -6,7 +6,7 @@
 
 @mixin shadowButtons{
     border: none;
-    box-shadow: 5px 10px 18px $light-bground-grey;
+    box-shadow: 3px 3px 20px 1px $light-bground-grey;
 }
 
 @mixin fadeButtons{
@@ -19,16 +19,10 @@
 
 @mixin menuList{
     display: flex;
-    flex-direction: column;
     height: 70px;
     background-color: white;
     width: 350px;
     border-radius: 15px;
     padding-left: 10px;
-    padding-top: 15px;
-    h4{
-        display: flex;
-        justify-content: space-between;
-        padding-right: 25px;
-    }
+    height: 70px;
 }

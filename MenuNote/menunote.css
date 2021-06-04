@@ -152,12 +152,68 @@ main h2:before {
 }
 
 main h3 {
+  padding-top: 15px;
+  padding-bottom: 5px;
   font-size: 1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 main h4 {
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: lighter;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+main .fa-check-circle {
+  color: white;
+  font-weight: 900;
+}
+
+main .fa-check-circle:before {
+  content: '\f058';
+}
+
+main .circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #99E2D0;
+  overflow: hidden;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 0%;
+}
+
+main .listMenu span {
+  padding-top: 38px;
+  padding-right: 25px;
+}
+
+main .listMenu:hover .circle {
+  width: 80px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+main .listMenu:hover .animCircle {
+  -webkit-animation: rotateCheck 0.3s linear;
+          animation: rotateCheck 0.3s linear;
+}
+
+main .widthAnim {
+  width: 95%;
 }
 
 section .container {
@@ -189,6 +245,25 @@ section .Title i {
   padding: 9px;
 }
 
+section .Title .fa-heart {
+  font-size: 22px;
+}
+
+section .Title .fa-heart:before {
+  content: "\f004";
+}
+
+section .Title .fa-heart:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-transition: all 0.8s linear;
+  transition: all 0.8s linear;
+  font-weight: 900;
+}
+
 section .containerEntree {
   padding-top: 45px;
   display: -webkit-box;
@@ -205,30 +280,15 @@ section .containerEntree {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   height: 70px;
   background-color: white;
   width: 350px;
   border-radius: 15px;
   padding-left: 10px;
-  padding-top: 15px;
+  height: 70px;
   border: none;
-  -webkit-box-shadow: 5px 10px 18px #eaeaea;
-          box-shadow: 5px 10px 18px #eaeaea;
-  row-gap: 7px;
-}
-
-.entree h4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-right: 25px;
+  -webkit-box-shadow: 3px 3px 20px 1px #eaeaea;
+          box-shadow: 3px 3px 20px 1px #eaeaea;
 }
 
 aside button {
@@ -244,11 +304,18 @@ aside button {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
   border: none;
-  -webkit-box-shadow: 5px 10px 18px #eaeaea;
-          box-shadow: 5px 10px 18px #eaeaea;
+  -webkit-box-shadow: 3px 3px 20px 1px #eaeaea;
+          box-shadow: 3px 3px 20px 1px #eaeaea;
   border-radius: 25px;
   height: 50px;
   width: 220px;
+}
+
+aside button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA 40%, #9356DC 100%);
+  -webkit-box-shadow: 5px 5px 5px 1px #a1a1a1;
+          box-shadow: 5px 5px 5px 1px #a1a1a1;
 }
 
 aside form {
@@ -285,60 +352,32 @@ aside form span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   height: 70px;
   background-color: white;
   width: 350px;
   border-radius: 15px;
   padding-left: 10px;
-  padding-top: 15px;
+  height: 70px;
   border: none;
-  -webkit-box-shadow: 5px 10px 18px #eaeaea;
-          box-shadow: 5px 10px 18px #eaeaea;
+  -webkit-box-shadow: 3px 3px 20px 1px #eaeaea;
+          box-shadow: 3px 3px 20px 1px #eaeaea;
   row-gap: 7px;
-}
-
-.dishes h4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-right: 25px;
 }
 
 .dessert {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   height: 70px;
   background-color: white;
   width: 350px;
   border-radius: 15px;
   padding-left: 10px;
-  padding-top: 15px;
+  height: 70px;
   border: none;
-  -webkit-box-shadow: 5px 10px 18px #eaeaea;
-          box-shadow: 5px 10px 18px #eaeaea;
+  -webkit-box-shadow: 3px 3px 20px 1px #eaeaea;
+          box-shadow: 3px 3px 20px 1px #eaeaea;
   row-gap: 7px;
-}
-
-.dessert h4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-right: 25px;
 }
 
 .containerDessert {
@@ -353,5 +392,117 @@ aside form span {
   row-gap: 15px;
 }
 
+.entree, .dishes, .dessert {
+  -webkit-animation: fadein 2s linear forwards;
+          animation: fadein 2s linear forwards;
+}
+
+.entree1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.entree2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.entree3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.dishes1 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.dishes2 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.dishes3 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.dessert1 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.dessert2 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.dessert3 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotateCheck {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCheck {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 /* ---------------------------------------------------------------------------------------------- */
+.entree4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
 /*# sourceMappingURL=menunote.css.map */

@@ -10,6 +10,7 @@
 @import './_variables';
 @import './_footer';
 @import './_mixins';
+@import './_loadingScreen';
 
 body{
     width: 100%;
@@ -72,9 +73,14 @@ section{
                 margin-bottom: 50px;
             }
 
-                span{
-                    color: white;
-                }
+            .btnExplore:hover{
+                background: linear-gradient($color-secondary 40%, $color-primary 100%);
+                box-shadow: 5px 5px 5px 1px #a1a1a1;
+            }
+
+            span{
+                color: white;
+            }
 }
 
 aside{
@@ -85,11 +91,20 @@ aside{
     }
 
         button{
+            font-weight: 580;
+            letter-spacing: 1px;
+            column-gap: 20px;
+            display: flex;
+            align-items: center;
             height: 75px;
             width: 325px;
             @include shadowButtons;
             border-radius: 25px; 
             background-color: white;
+
+            i{
+                padding: 12px;
+            }
         }
 
 
@@ -108,8 +123,9 @@ aside{
                 row-gap: 25px;
                 margin-bottom: 65px;
             }
-        
+
         .numbers{
+            margin-left: -10px;
             background: $color-primary;
             color: white;
             padding: 0.5em 0.6em;
@@ -120,6 +136,12 @@ aside{
 
 article{
     background-color: $white-grey;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
     h2{
         padding-left: 25px;
         padding-top: 60px;
@@ -133,11 +155,25 @@ article{
         }
 
             figure{
+                max-width: 450px;
                 width: 85%;
                 height: 250px;
                 border-radius: 25px;
-                box-shadow: 0 0 2px gray;
+                @include shadowButtons;
             }
+
+                p{
+                    display: flex;
+                    position: absolute;
+                    left: 73%;
+                    font-size: 12px;
+                    font-weight: 600;
+                    background: #99E2D0;
+                    color: rgb(0, 135, 102);
+                    padding: 5px 8px 5px 8px;
+                    margin-top: 20px;
+                }
+            
 
                 img{
                     object-fit: cover;
@@ -148,22 +184,90 @@ article{
                 }
                     figcaption{
                         display: flex;
-                        flex-direction: column;
                         padding-left: 15px;
                         padding-top: 20px;
-
+                        justify-content: space-between;
                         h3{
-                            display: flex;
+                            font-size: 15px;
                         }
 
                         h4{
-                            display: flex;
+                            font-size: 14px;
                         }
 
                         .fa-heart{
-                            display: flex;
+                            font-size: 22px;
+                            margin-right: 20px;
+                        }
+
+                        .fa-heart:before {
+                            content: "\f004";
+                        }
+
+                        .fa-heart:hover{
+                            background: linear-gradient($color-primary, $color-secondary);
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-background-clip: text;
+                            transition: all 0.8s linear;
+                            font-weight: 900;
                         }
                     }
+}
+
+@media screen and (min-width: 650px){
+    aside{
+        h2{
+            @include centerFlex;
+        }
+    }
+
+    article{
+        width: 100%;
+        height: auto;
+        h2{
+            @include centerFlex;
+        }
+
+        figure{
+            min-width: 375px;
+        }
+
+        .Restaurants{
+            row-gap: 40px;
+        }
+
+        p{
+            left: unset;
+            margin-left: 360px;
+        }
+    }
 
 }
 
+@media screen and (min-width: 1100px){
+    aside{
+        .buttonsOperation{
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+
+    article{
+        .Restaurants{
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 100px;
+            row-gap: 100px;
+            padding-top: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1520px){
+    .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1520px;
+    }
+}
