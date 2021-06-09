@@ -14,7 +14,7 @@
 }
 
 @mixin InvertedfadeButtons{
-    background-image:linear-gradient($color-secondary, $color-primary);
+    background-image:linear-gradient($color-secondary, rgb(175,95,220), $color-primary);
 }
 
 @mixin menuList{

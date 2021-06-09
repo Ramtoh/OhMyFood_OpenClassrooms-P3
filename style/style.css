@@ -300,8 +300,8 @@ section .btnExplore {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(#af5fdc), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #af5fdc, #9356DC);
   border: none;
   -webkit-box-shadow: 3px 3px 20px 1px #eaeaea;
           box-shadow: 3px 3px 20px 1px #eaeaea;
