@@ -3,6 +3,8 @@
 
 Ohmyfood est le troisième projet OpenClassrooms, le principe étant de dynamiser un site web existant en utilisant CSS (dans mon cas, j'ai expérimenté SASS : pré-processeur CSS)
 
+Site visible : https://ramtoh.github.io/OhMyFood_OpenClassrooms-P3/
+
 ## Fonctionnalités
 
 - Animation de chargement
